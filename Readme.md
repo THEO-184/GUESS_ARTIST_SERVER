@@ -2,6 +2,8 @@
 
 <!-- ### applicant_name: Theophilus Boakye -->
 
+<<<<<<< HEAD
+
 #### [Github/SERVER REPO] (https://github.com/THEO-184/GUESS_ARTIST_SERVER)
 
 #### [Github/CLIENT REPO] (https://github.com/THEO-184/GUESS_ARTSIST_CLIENT)
