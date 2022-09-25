@@ -8,8 +8,9 @@
 
 **GUIDLINES TO RUNNING THE APP**
 
-<!--
 **SERVER SIDE**
+
+# backend is already hosted but if you want to run it locally then follow the below
 
 1. npm install
 2. create a .env file with the following variables
@@ -20,9 +21,11 @@
 
 you can generate one from here [allkeysgenerator] (https://allkeysgenerator.com/)
 
-3. npm run dev -->
+3. npm run dev
 
 **FRONTEND**
+
+# run frontend locally to connect to the hosted server
 
 1. npm install
 2. npm run dev
