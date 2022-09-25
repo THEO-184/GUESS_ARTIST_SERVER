@@ -10,6 +10,7 @@
 
 **GUIDLINES TO RUNNING THE APP**
 
+<!--
 **SERVER SIDE**
 
 1. npm install
@@ -21,7 +22,7 @@
 
 you can generate one from here [allkeysgenerator] (https://allkeysgenerator.com/)
 
-3. npm run dev
+3. npm run dev -->
 
 **FRONTEND**
 
