@@ -2,14 +2,13 @@
 
 <!-- ### applicant_name: Theophilus Boakye -->
 
-<<<<<<< HEAD
-
 #### [Github/SERVER REPO] (https://github.com/THEO-184/GUESS_ARTIST_SERVER)
 
 #### [Github/CLIENT REPO] (https://github.com/THEO-184/GUESS_ARTSIST_CLIENT)
 
 **GUIDLINES TO RUNNING THE APP**
 
+<!--
 **SERVER SIDE**
 
 1. npm install
@@ -21,7 +20,7 @@
 
 you can generate one from here [allkeysgenerator] (https://allkeysgenerator.com/)
 
-3. npm run dev
+3. npm run dev -->
 
 **FRONTEND**
 
