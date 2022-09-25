@@ -2,7 +2,9 @@
 
 <!-- ### applicant_name: Theophilus Boakye -->
 
-#### [Github] (https://github.com/THEO-184/GUESS_ARTIST_SERVER)
+#### [Github/SERVER REPO] (https://github.com/THEO-184/GUESS_ARTIST_SERVER)
+
+#### [Github/CLIENT REPO] (https://github.com/THEO-184/GUESS_ARTSIST_CLIENT)
 
 **GUIDLINES TO RUNNING THE APP**
 
