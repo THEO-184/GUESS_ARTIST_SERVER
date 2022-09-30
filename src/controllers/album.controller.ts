@@ -7,7 +7,6 @@ import { getArtistAlbums } from "../utils/functions";
 import BadRequest from "../errors/badRequestError";
 import User from "../models/user.model";
 import { userAlbumService } from "../service/album.service";
-import { TokenExpiredError } from "jsonwebtoken";
 
 export const createUserAlbum: RequestHandler = async (req, res) => {
 	const randomNumber = req.user.random_number;
@@ -22,6 +21,15 @@ export const createUserAlbum: RequestHandler = async (req, res) => {
 };
 
 export const getUserAlbum: RequestHandler = async (req, res) => {
+	const user = await User.findOne({ _id: req.user._id });
+	if (!user) {
+		throw new NotFound(`no user found with id : ${req.user._id}`);
+	}
+
+	if (user?.round > 5) {
+		return res.status(StatusCodes.OK).json({ user, msg: "Game Over!!!" });
+	}
+
 	const albums = await Album.findOne({ user: req.user._id }).populate(
 		"user",
 		"username scores round"
@@ -80,11 +88,7 @@ export const nextRound: RequestHandler<
 	{},
 	{ attemptNumber: number; scores: number; round: number }
 > = async (req, res, next) => {
-	const { attemptNumber, scores, round } = req.body;
-
-	if (round > 5) {
-		return res.status(StatusCodes.OK).json({ msg: "Game Over!!!" });
-	}
+	const { scores, round } = req.body;
 
 	if (typeof scores === "undefined" || !round) {
 		throw new BadRequest("provide scores and round");
@@ -99,7 +103,6 @@ export const nextRound: RequestHandler<
 	if (!user) {
 		throw new NotFound(`no album found for user ${req.user._id}`);
 	}
-	console.log("random number generated", randomNumber);
 	req.user.random_number = randomNumber;
 
 	next();
@@ -109,7 +112,6 @@ export const updateUserAlbumDetails: RequestHandler<{}, {}> = async (
 	req,
 	res
 ) => {
-	console.log("update user random", req.user.random_number);
 	const albumData = await userAlbumService(req, req.user.random_number);
 	const userAlbum = await Album.findOneAndUpdate(
 		{ user: req.user._id },

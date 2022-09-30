@@ -7,7 +7,6 @@ import { AlbumReturnType } from "../utils/interface";
 export const userAlbumService = async (req: Request, random_number: number) => {
 	const randomArtist = ARTISTS[random_number];
 	const response = await getArtistAlbums(randomArtist);
-	console.log("response", response);
 	if (!response) {
 		throw new NotFound(`no artist found with name ${randomArtist}`);
 	}
