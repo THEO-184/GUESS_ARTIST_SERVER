@@ -6,4 +6,4 @@
 
 #### [Github/CLIENT REPO] (https://github.com/THEO-184/GUESS_ARTSIST_CLIENT)
 
-# hosted URL [client_url] (http://tiresome-mass.surge.sh)
+# hosted URL [client_url] (https://guess-artist-client.onrender.com/)
