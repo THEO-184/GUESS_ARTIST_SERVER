@@ -25,11 +25,7 @@ you can generate one from here [allkeysgenerator] (https://allkeysgenerator.com/
 
 **FRONTEND**
 
-<<<<<<< HEAD
 client side hosted on [client_url] (http://tiresome-mass.surge.sh)
-=======
-client side hosted on [client_url] (http://tiresome-mass.surge.sh/login)
->>>>>>> 768a67d58b686ec853302a5da66b0c701f4ad5ce
 
 # run frontend locally to connect to the hosted server
 
