@@ -10,7 +10,7 @@ import cors from "cors";
 import connectDb from "./db/connect";
 import expressErrorMiddleware from "./middlewares/express-middleware";
 import authRoutes from "./routes/auth.routes";
-import userRoutes from "./routes/user.routes";
+import userRoutes from "./routes/game.routes";
 
 const app = express();
 // middlewars

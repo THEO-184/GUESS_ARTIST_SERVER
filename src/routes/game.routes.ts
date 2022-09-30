@@ -6,8 +6,9 @@ import {
 	nextRound,
 	restartGame,
 	updateUserAlbumDetails,
-} from "../controllers/album.controller";
+} from "../user/controllers/album.controller";
 import { authMiddleware } from "../middlewares/auth-middleware";
+import { attacheRandomNumber } from "../middlewares/attachRandomNumber";
 
 const router = Router();
 
@@ -16,7 +17,9 @@ router
 	.get(authMiddleware, getUserAlbum)
 	.put(authMiddleware, nextAttempt, getUserAlbum);
 
-router.route("/rounds").put(authMiddleware, nextRound, updateUserAlbumDetails);
+router
+	.route("/rounds")
+	.put(authMiddleware, nextRound, attacheRandomNumber, updateUserAlbumDetails);
 
 router.route("/restart").put(authMiddleware, restartGame);
 

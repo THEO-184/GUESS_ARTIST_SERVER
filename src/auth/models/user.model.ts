@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { Roles, UserDocument, UserInput } from "../utils/types/user.types";
+import { Roles, UserDocument, UserInput } from "../../utils/types/user.types";
 
 const UserSchema = new Schema<UserInput>(
 	{

@@ -1,11 +1,11 @@
-import { createJWT } from "./../utils/jwt";
+import { createJWT } from "../../utils/jwt";
 import { StatusCodes } from "http-status-codes";
 import { RequestHandler } from "express";
 import User from "../models/user.model";
-import { UserInput } from "../utils/types/user.types";
-import BadRequest from "../errors/badRequestError";
-import NotFound from "../errors/notFound";
-import UnAuthenticated from "../errors/unAuthenticated";
+import { UserInput } from "../../utils/types/user.types";
+import BadRequest from "../../errors/badRequestError";
+import NotFound from "../../errors/notFound";
+import UnAuthenticated from "../../errors/unAuthenticated";
 
 export const registerUser: RequestHandler<{}, {}, UserInput> = async (
 	req,

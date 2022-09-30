@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { AlbumContent, AlbumDocument } from "../utils/types/album.types";
+import { AlbumContent, AlbumDocument } from "../../utils//types//album.types";
 
 const AlbumContent = new Schema<AlbumContent>({
 	artistName: {
