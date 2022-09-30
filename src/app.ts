@@ -15,12 +15,6 @@ import userRoutes from "./routes/game.routes";
 const app = express();
 // middlewars
 app.use(morgan("tiny"));
-// app.use(
-// 	cors({
-// 		credentials: true,
-// 		origin: "https://guess-artist-client.onrender.com/",
-// 	})
-// );
 
 app.use(cors());
 app.use(bodyParser.json());

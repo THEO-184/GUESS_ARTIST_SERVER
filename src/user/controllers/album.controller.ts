@@ -109,9 +109,9 @@ export const updateUserAlbumDetails: RequestHandler<{}, {}> = async (
 };
 
 export const getUsersScores: RequestHandler = async (req, res) => {
-	const scores = await User.find({ round: { $gte: 5 } }).select(
-		"username scores updatedAt"
-	);
+	const scores = await User.find({ round: { $gte: 5 } })
+		.select("username scores updatedAt")
+		.sort("scores updatedAt");
 
 	res.status(StatusCodes.OK).json({ count: scores.length, scores });
 };
