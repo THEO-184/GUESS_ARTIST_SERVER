@@ -23,18 +23,18 @@ const cors_1 = __importDefault(require("cors"));
 const connect_1 = __importDefault(require("./db/connect"));
 const express_middleware_1 = __importDefault(require("./middlewares/express-middleware"));
 const auth_routes_1 = __importDefault(require("./routes/auth.routes"));
-const user_routes_1 = __importDefault(require("./routes/user.routes"));
+const game_routes_1 = __importDefault(require("./routes/game.routes"));
 const app = (0, express_1.default)();
 // middlewars
 app.use((0, morgan_1.default)("tiny"));
 app.use((0, cors_1.default)({
     credentials: true,
-    origin: "http://127.0.0.1:5173",
+    origin: "http://tiresome-mass.surge.sh/",
 }));
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use("/api/v1/auth", auth_routes_1.default);
-app.use("/api/v1/game", user_routes_1.default);
+app.use("/api/v1/game", game_routes_1.default);
 app.use(express_middleware_1.default);
 const PORT = process.env.PORT || 5000;
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
