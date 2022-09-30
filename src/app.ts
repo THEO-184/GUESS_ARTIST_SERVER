@@ -18,7 +18,7 @@ app.use(morgan("tiny"));
 app.use(
 	cors({
 		credentials: true,
-		origin: "http://127.0.0.1:5173",
+		origin: "http://tiresome-mass.surge.sh/",
 	})
 );
 app.use(bodyParser.json());

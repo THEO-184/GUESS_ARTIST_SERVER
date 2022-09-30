@@ -25,6 +25,8 @@ you can generate one from here [allkeysgenerator] (https://allkeysgenerator.com/
 
 **FRONTEND**
 
+client side hosted on [client_url] (http://tiresome-mass.surge.sh)
+
 # run frontend locally to connect to the hosted server
 
 1. npm install
