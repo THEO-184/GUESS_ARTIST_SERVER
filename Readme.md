@@ -25,7 +25,11 @@ you can generate one from here [allkeysgenerator] (https://allkeysgenerator.com/
 
 **FRONTEND**
 
+<<<<<<< HEAD
 # client side hosted on [client_url] (http://tiresome-mass.surge.sh)
+=======
+client side hosted on [client_url] (http://tiresome-mass.surge.sh)
+>>>>>>> 9ad01ea58a1109f369d00c36b42f797b4f1f75ce
 
 1. npm install
 2. npm run dev
