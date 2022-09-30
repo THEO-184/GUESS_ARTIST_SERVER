@@ -18,7 +18,7 @@ app.use(morgan("tiny"));
 app.use(
 	cors({
 		credentials: true,
-		origin: "https://guess-artist-client.onrender.com",
+		origin: "https://guess-artist-client.onrender.com/",
 	})
 );
 app.use(bodyParser.json());
